@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mainbar"></div>
+    <div id="app"></div>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('public/css/main.css!');
+      System.import('normalize.css');
+      System.import('fetch').then(function() {
+        System.import('core-js').then(function() {
+          System.import('lib/app');
+        });
+      });
+    </script>
+  </body>
+</html>
